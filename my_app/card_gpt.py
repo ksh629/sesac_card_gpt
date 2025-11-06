@@ -86,7 +86,7 @@ def conversation_with_memory(question):
 
     # 2. 응답 생성 및 출력
     full_response = ""
-    for chunk in chain.stream(question)
+    for chunk in chain.stream(question):
         full_response += chunk
         stream_placeholder.write(full_response)
 
