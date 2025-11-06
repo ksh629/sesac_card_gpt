@@ -104,7 +104,7 @@ st.title("My GPT")
 
 # 1. 대화 기록 출력
 # 반복문으로 messages에 있는 모든 대화 기록에 접근
-for message in session_state["messages"]:
+for message in st.session_state["messages"]:
     # chat_message: 메시지의 발신자 role(assistant인지 user인지)에 따라 UI를 구분하여 메시지 창을 표시해주는 함수 
     with st.chat_message(message["role"]): # 역할 지정
         st.write(message["content"]) # 해당 역할의 메시지 출력
